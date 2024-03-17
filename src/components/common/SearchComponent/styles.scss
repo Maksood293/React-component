@@ -1,0 +1,20 @@
+.input-group {
+  height: 63px !important;
+}
+.form-control {
+  background-color: #f0f0f0 !important;
+  border: none !important;
+  &:focus-within {
+    outline: none !important;
+    outline-style: none !important;
+    box-shadow: none !important;
+  }
+}
+.input-group-text {
+  background-color: #f0f0f0 !important;
+  border: none !important;
+}
+.dropdown-toggle {
+  background: #18a0fb !important;
+  border: none !important;
+}

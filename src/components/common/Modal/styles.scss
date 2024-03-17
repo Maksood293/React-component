@@ -1,0 +1,9 @@
+@import "../../../common-scss/abstracts/index";
+
+.modal{
+	border-radius: calculateRem(8);
+	border: caclulateRem(1) solid $clr-greyscale-500;
+   &__footer{
+    border-top: none !important;
+   }
+}

@@ -1,0 +1,39 @@
+@import "../../../common-scss/abstracts/index";
+
+@mixin alert-common {
+    border-radius: calculateRem(18) !important;
+    border-width: calculateRem(3) !important;
+    padding: calculateRem(15) !important;
+  }
+  
+  @mixin alert-variant($border-color, $background-color) {
+    border-color: $border-color !important;
+    background: $background-color !important;
+  }
+  
+  .alert {
+    @include alert-common;
+  
+    &-success {
+      @include alert-variant($clr-indicators-green-300, rgba(29, 185, 73, 0.1));
+    }
+  
+    &-danger {
+      @include alert-variant($clr-indicators-red-100, #fef0ed);
+    }
+  
+    &-primary {
+      @include alert-variant($clr-primary-100, rgba(24, 160, 251, 0.1));
+    }
+  
+    &-warning {
+      @include alert-variant($clr-indicators-yellow-200, rgba(255, 199, 0, 0.1));
+    }
+  }
+  
+.btn-close {
+    top:calculateRem(8) !important;
+  &:focus {
+    box-shadow: none !important;
+  }
+}

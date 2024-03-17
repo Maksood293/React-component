@@ -1,0 +1,58 @@
+@import '../../../common-scss/abstracts/index';
+
+.body {
+  &--is-inline {
+    display: inline;
+  }
+}
+
+.body--clr {
+  &-basic {
+    color: $clr-secondary-200;
+  }
+  &-primary{
+    color: $clr-primary-100;
+  }
+ &-error {
+    color: $clr-indicators-red-100;
+  }
+  &-success{
+    color:$clr-indicators-green-300;
+  }
+  &-info{
+    color: $clr-indicators-yellow-200;
+  }
+  
+}
+.body--fontweight {
+  &--normal {
+    font-weight: 400;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--semibold {
+    font-weight: 600;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}
+
+.body--type {
+  &-body1 {
+    @include fontSize(14);
+  }
+  &-body2 {
+    @include fontSize(12);
+  }
+  &-body3 {
+    @include fontSize(10);
+  }
+  &-body4 {
+    @include fontSize(8);
+  }
+}

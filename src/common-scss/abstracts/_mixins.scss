@@ -1,0 +1,31 @@
+@mixin buttonStyl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calculateRem(10);
+    border-radius: calculateRem(8);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  @mixin small {
+    padding: calculateRem(7) calculateRem(24);
+    font-size: calculateRem(12);
+    letter-spacing: calculateRem(0.36);
+  }
+  @mixin medium {
+    padding: calculateRem(9) calculateRem(20);
+    font-size: calculateRem(14);
+    letter-spacing: calculateRem(0.42);
+  }
+  @mixin large {
+    padding: calculateRem(13) calculateRem(20);
+    font-size: calculateRem(14);
+    letter-spacing: calculateRem(0.42);
+  }
+  @mixin extraLarge {
+    padding: calculateRem(11) calculateRem(35);
+    font-size: calculateRem(18);
+    letter-spacing: calculateRem(0.54);
+  }

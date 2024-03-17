@@ -1,0 +1,26 @@
+@import "../../../common-scss/abstracts/index";
+
+.button-group{
+   
+&__primary{
+    background-color:$clr-primary-100 !important;
+    transition: all 0.5s linear;
+    border: none !important;
+}
+&__outline-primary{
+    background-color:$clr-primary-100 !important;
+    transition: all 0.5s linear;
+    color: white !important;
+    border: none !important;
+}
+// &__toggle-button{
+//     color: #18A0FB !important;
+// }
+}
+.btn-group{
+    width: -webkit-fill-available !important;
+    border-radius: calculateRem(4)  calculateRem(0)  calculateRem(0)  calculateRem(4) !important;
+    padding:  calculateRem(10)  calculateRem(16) !important;
+    font-size:  calculateRem(16) !important;
+    
+}

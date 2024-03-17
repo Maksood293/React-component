@@ -1,0 +1,44 @@
+@import "../../../common-scss/abstracts/index";
+
+// Icon button styles
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calculateRem(12) calculateRem(19);
+  border: none;
+  border-radius: calculateRem(12);
+  cursor: pointer;
+  box-shadow: calculateRem(0) calculateRem(2) calculateRem(3) calculateRem(0) rgba(0, 0, 0, 0.1);
+  &--enabled {
+    color: $clr-primary-100;
+    //   border: 1px solid $clr-primary-100;
+    &:hover {
+      background: $clr-greyscale-700 !important;
+    }
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      color: $clr-secondary-600 !important;
+      background-color: $clr-primary-100 !important;
+    }
+  }
+
+  &--disabled {
+    color: #ccc;
+    cursor: not-allowed;
+
+    &:active,
+    &:hover {
+      color: #ccc !important;
+      cursor: not-allowed;
+      background: $clr-greyscale-700 !important;
+    }
+  }
+
+  .icon {
+    display: inline-block;
+  }
+}

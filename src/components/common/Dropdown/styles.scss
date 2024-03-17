@@ -1,0 +1,59 @@
+@import "../../../common-scss/abstracts/index";
+
+// Dropdown styles
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: calculateRem(10);
+  border-radius: calculateRem(8);
+  background: $clr-secondary-600;
+  &__dropdown-toggle {
+    cursor: pointer;
+    background-color: $clr-greyscale-900;
+    border: calculateRem(1) solid #ccc;
+    border-radius: calculateRem(4);
+    box-shadow: calculateRem(0) calculateRem(4) calculateRem(6) calculateRem(0)
+      rgba(0, 0, 0, 0.1);
+    padding: calculateRem(11) calculateRem(16);
+  }
+
+  .dropdown-toggle.open {
+    background-color: #e0e0e0;
+  }
+
+  &__dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: $clr-secondary-600;
+    border: calculateRem(1) solid #ccc;
+    border-top: none;
+    border-radius: 0 0 calculateRem(4) calculateRem(4);
+    box-shadow: 0 calculateRem(2) calculateRem(4) rgba(0, 0, 0, 0.1);
+
+    &__slected {
+      background: $clr-primary-100;
+      color: $clr-secondary-600;
+      &:hover {
+        background: $clr-primary-100;
+      }
+    }
+    li {
+      cursor: pointer;
+      padding: calculateRem(15) calculateRem(16);
+      font-size: calculateRem(14);
+      font-weight: 600;
+      line-height: calculateRem(16);
+      font-style: normal;
+
+      width: 100%;
+      &:hover {
+        background: $clr-greyscale-600;
+      }
+    }
+  }
+}

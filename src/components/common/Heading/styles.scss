@@ -1,0 +1,64 @@
+@import "../../../common-scss/abstracts/index";
+
+.heading {
+  font-weight: 700;
+  font-family: $ff-primary;
+  color: $clr-secondary-200;
+  line-height: normal;
+
+  &--h1 {
+    @include fontSize(28);
+  }
+
+  &--h2 {
+    @include fontSize(21);
+  }
+
+  &--h3 {
+    @include fontSize(18);
+    letter-spacing: calculateRem(0.54);
+  }
+
+  &--h4 {
+    @include fontSize(16);
+    letter-spacing: calculateRem(0.16);
+  }
+
+  &--h5 {
+    @include fontSize(14);
+    letter-spacing: calculateRem(0.28);
+  }
+  &--h6 {
+    @include fontSize(16);
+  }
+  &--caption {
+    @include fontSize(14);
+    letter-spacing: calculateRem(0.42);
+    font-weight: 500;
+  }
+  &--overline {
+    @include fontSize(12);
+    letter-spacing: calculateRem(0.6);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &--light {
+    font-weight: 300;
+  }
+  &--regular {
+    font-weight: 400;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--semibold {
+    font-weight: 600;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}

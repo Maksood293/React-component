@@ -1,0 +1,122 @@
+@import "../../../common-scss/abstracts/index";
+
+$border-size: calculateRem(2);
+$mobile-border-size: calculateRem(1);
+
+@mixin flexBox($justify-content) {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: $justify-content;
+}
+.tabs-primary {
+  @include fontSize(21);
+  margin-block: calculateRem(30);
+
+  &--border {
+    border: calculateRem(1) solid black;
+  }
+
+  &__list {
+    @include flexBox(center);
+    margin-bottom: calculateRem(30);
+    border-radius: calculateRem(8);
+    background: $clr-secondary-600;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
+    height: calculateRem(63);
+    padding: calculateRem(11);
+  }
+
+  &__pane {
+    @include flexBox(center);
+    color: $clr-primary-100;
+    cursor: pointer;
+    height: 100%;
+    //--- Ripple Effect Start---//
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    margin-right: calculateRem(11);
+    &--active,
+    &:hover {
+      color: $clr-secondary-600;
+      font-weight: bold;
+      border-bottom: none;
+      border-radius: calculateRem(8);
+      background: $clr-primary-100;
+      box-shadow: calculateRem(0) calculateRem(0) calculateRem(3) calculateRem(0) rgba(0, 0, 0, 0.1);
+    }
+
+    &--disabled {
+      color: gray;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.tabs-secondary {
+  @include fontSize(14);
+  margin-block: calculateRem(30);
+  transition: all 0.5s linear;
+
+  &--border {
+    border: calculateRem(1) solid gray;
+  }
+
+  &__list {
+    @include flexBox(flex-start);
+    height: calculateRem(36);
+    box-shadow: calculateRem(0) calculateRem(4) calculateRem(0) gray;
+    margin-bottom: calculateRem(40);
+  }
+
+  &__pane {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding-inline: 2.8125rem;
+    color: gray;
+    height: 100%;
+    white-space: nowrap;
+    padding-bottom: calculateRem(10);
+    font-size: calculateRem(16);
+    font-weight: bold;
+    margin-right: calculateRem(25);
+    &--active,
+    &:hover {   
+      text-shadow: calculateRem(0) calculateRem(0) calculateRem(1) gray;
+      box-shadow: calculateRem(0) calculateRem(4) calculateRem(0) #18a0fb;
+      color: black;
+    }
+  }
+}
+
+// @include respond(mobile) {
+
+//   .tabs-primary,
+//   .tabs-secondary {
+//     @include fontSize(14);
+//     margin-block: 0;
+
+//     ul {
+//       li {
+//         flex: 1 0 auto;
+//         padding-top: calculateRem(10);
+//       }
+//     }
+
+//     &__pane {
+//       padding-inline: calculateRem(10);
+//       justify-content: center;
+//     }
+
+//     &__list {
+//     z-index: 2;
+
+//     &--scrollbar {
+//       overflow-x: auto
+//     }
+//   }
+//   }
+// }

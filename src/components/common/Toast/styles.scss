@@ -1,0 +1,48 @@
+@import "../../../common-scss/abstracts/index";
+
+.toast-container {
+  position: fixed;
+  top: calculateRem(
+    20
+  ); /* Adjust this value to control the distance from the top */
+  left: calculateRem(
+    340
+  ); /* Adjust this value to control the distance from the left */
+  z-index: 1000;
+  width: calculateRem(776) !important;
+  height: calculateRem(123) !important;
+  .toast {
+    border-radius: calculateRem(8);
+    border: calculateRem(1) solid $clr-greyscale-950;
+    background: $clr-secondary-600;
+    box-shadow: calculateRem(0) calculateRem(2) calculateRem(3) calculateRem(0)
+      rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items:baseline;
+    padding: calculateRem(10);
+    margin: calculateRem(10) 0;
+    color: $clr-secondary-600;
+    font-size: calculateRem(14);
+
+    &--success,
+    &--error,
+    &--info,
+    &--warning {
+      width: 100%;
+      color: black;
+    }
+
+    &__icon {
+      margin-right: calculateRem(10);
+      font-size: calculateRem(20);
+    }
+
+    &__close {
+      cursor: pointer;
+      font-size: calculateRem(16);
+    }
+    &:not(.show) {
+      display: flex !important;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@import "../../../common-scss/abstracts/index";
+
+.form-check-input:checked {
+    background-color: #18A0FB !important;
+    border-color:none !important;
+}

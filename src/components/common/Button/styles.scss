@@ -1,0 +1,57 @@
+@import "../../../common-scss/abstracts/index";
+
+$bg-color: $clr-secondary-600;
+.button {
+  border: calculateRem(2) solid $clr-primary-100;
+  color: $clr-primary-100;
+  @include buttonStyl();
+  transition: all 0.5s linear;
+  &--small {
+    @include small();
+    background-color: $bg-color
+  }
+  &--medium {
+    @include medium();
+    background-color: $bg-color
+  }
+  &--large {
+    @include large();
+    background-color: $bg-color
+  }
+  &--extra-large {
+    @include extraLarge();
+    background-color: $bg-color
+  }
+
+  &:hover {
+    background: $clr-primary-100;
+    box-shadow: calculateRem(0) calculateRem(4) calculateRem(8) calculateRem(0)
+      rgba(0, 0, 0, 0.15);
+    color: $clr-secondary-600;
+  }
+  &:active {
+    background: $clr-primary-200;
+    box-shadow: calculateRem(0) calculateRem(4) calculateRem(8) calculateRem(0)
+      rgba(0, 0, 0, 0.15);
+    color: $clr-secondary-600;
+    border: calculateRem(2) solid $clr-primary-200;
+  }
+}
+.button-disabled {
+  border: calculateRem(2) solid $clr-secondary-300;
+  color: $clr-secondary-300;
+  background-color: white;
+  @include buttonStyl();
+  &--small {
+    @include small();
+  }
+  &--medium {
+    @include medium();
+  }
+  &--large {
+    @include large();
+  }
+  &--extra-large {
+    @include extraLarge();
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../../common-scss/abstracts/index";
+
+.shadow {
+  border-radius: calculateRem(8);
+  background: $clr-greyscale-600;
+  width: calculateRem(210);
+  height: calculateRem(309);
+  &--none {
+    box-shadow:none;
+  }
+  &--small {
+    box-shadow: calculateRem(0) calculateRem(4) calculateRem(6) calculateRem(0)
+      rgba(0, 0, 0, 0.1);
+  }
+  &--medium {
+    box-shadow: calculateRem(0) calculateRem(4) calculateRem(4) calculateRem(0)
+      rgba(0, 0, 0, 0.1);
+  }
+  &--large {
+    box-shadow: calculateRem(0) calculateRem(2) calculateRem(3) calculateRem(0)
+      rgba(0, 0, 0, 0.1);
+  }
+  &--xlarge {
+    box-shadow: calculateRem(0) calculateRem(4) calculateRem(4) calculateRem(0)
+      rgba(0, 0, 0, 0.25);
+  }
+  &--xxlarge {
+    box-shadow: calculateRem(0) calculateRem(0) calculateRem(3) calculateRem(0)
+    rgba(0, 0, 0, 0.1);
+  }
+}

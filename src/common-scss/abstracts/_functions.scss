@@ -1,0 +1,9 @@
+// TODO: replace with a base font size
+@function calculateRem($size) {
+    $remSize: calc($size / 16);
+    @return #{$remSize}rem;
+  }
+  @mixin fontSize($size) {
+    font-size: #{$size}px; // fall back px value
+    font-size: calculateRem($size);
+  }

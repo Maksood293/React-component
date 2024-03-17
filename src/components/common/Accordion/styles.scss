@@ -1,0 +1,25 @@
+@import "../../../common-scss/abstracts/index";
+
+.accordion-button::after {
+  transform: rotate(275deg) !important;
+}
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(360deg) !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: $clr-greyscale-800 !important;
+}
+.accordion-button:focus {
+  border-color: $clr-secondary-300 !important;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1) !important;
+}
+.custom-accordition {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &__secondTitle {
+    position: absolute;
+    left: 40%;
+    color: $clr-secondary-300;
+  }
+}
